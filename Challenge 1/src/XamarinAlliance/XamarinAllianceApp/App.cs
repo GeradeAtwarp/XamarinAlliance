@@ -9,8 +9,8 @@ namespace XamarinAllianceApp
 	{
 		public App ()
 		{
-			// The root page of your application
-			MainPage = new CharacterList();
+            // The root page of your application
+            MainPage = new NavigationPage(new CharacterList());
 		}
 
 		protected override void OnStart ()

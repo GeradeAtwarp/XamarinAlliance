@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamarinAllianceApp.Views.CastMemberDetails">
+
+  <Grid RowSpacing="0">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+
+    <ActivityIndicator HorizontalOptions="Center" VerticalOptions="Center" IsVisible="False" IsEnabled="True"  x:Name="syncIndicator"/>
+    
+    <StackLayout Grid.Row="1" Padding="32,16,32,0">
+      <Image
+          HorizontalOptions="FillAndExpand"
+          VerticalOptions="FillAndExpand"
+          Aspect="AspectFit"
+          HeightRequest="150"
+          x:Name="imgAvatar">
+      </Image>
+    </StackLayout>
+
+    <StackLayout Grid.Row="2" BackgroundColor="White" Padding="16,16">
+      <Grid RowSpacing="8" >
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="Auto" />
+          <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="Auto" />
+          <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Label Grid.Column="0" Text="Name" FontAttributes="Bold" />
+        <Label Grid.Column="1" HorizontalOptions="EndAndExpand" x:Name="lblName" />
+
+        <Label Grid.Row="1" Grid.Column="0" Text="Birthday" FontAttributes="Bold" />
+        <Label Grid.Row="1" Grid.Column="1" HorizontalOptions="EndAndExpand"  x:Name="lblBday"  />
+
+        <Label Grid.Row="2" Grid.Column="0" Text="Birthplace" FontAttributes="Bold" />
+        <Label Grid.Row="2" Grid.Column="1" HorizontalOptions="EndAndExpand" x:Name="lblBirthplace"  />
+
+        <Label Grid.Row="3" Grid.ColumnSpan="2" x:Name="lblBio"  />
+
+      </Grid>
+    </StackLayout>
+
+  </Grid>
+  
+</ContentPage>
